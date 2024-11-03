@@ -1,0 +1,60 @@
+/* Destination Section */
+.destination-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+
+.destination-card {
+    width: 300px; /* Fixed width */
+    height: 420px; /* Fixed height */
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+    overflow: hidden;
+    position: relative; /* Added for positioning */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(31, 45, 61, 0.2);
+}
+
+.destination-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-details {
+    padding: 20px;
+    text-align: center;
+    position: absolute; /* Changed to absolute for overlay effect */
+    bottom: 0; /* Aligns to the bottom */
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9); /* Optional: Adds a white overlay */
+    transition: transform 0.3s ease; /* Smooth transition for details */
+}
+
+.destination-about {
+    max-height: 50px; /* Limit height to make text hidden */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+.read-more-button {
+    margin-top: 10px; /* Space between text and button */
+}
+
+/* Message styling when no data is available */
+.no-destinations-message {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+}

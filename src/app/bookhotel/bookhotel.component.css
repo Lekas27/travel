@@ -1,0 +1,57 @@
+/* Hotel Section */
+.hotel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 100px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .hotel-card {
+    width: 300px; /* Fiksna širina kartice */
+    height: 420px; /* Fiksna visina kartice */
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(31, 45, 61, 0.2);
+  }
+  
+  .hotel-image { /* Fiksna veličina slike */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .hotel-details {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .hotel-details h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #007FFF;
+    margin-bottom: 10px;
+  }
+  
+  .hotel-details p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+  }
+  
+  /* Message styling when no data is available */
+  .no-hotels-message {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,19 @@
+<div *ngIf="destinations && destinations.length > 0" class="destination-container">
+  <div *ngFor="let destination of destinations" class="destination-card">
+    <img 
+      class="destination-image" 
+      [src]="'http://localhost:1337' + destination.image[0]?.url" 
+      alt="{{ destination.city }}" 
+    />
+    <div class="destination-details">
+      <h2>{{ destination.country }}</h2>
+      <p class="destination-about">{{ destination.about }}</p>
+      <button class="btn btn-primary read-more-button">Read More</button>
+    </div>
+  </div>
+</div>
+
+<!-- Message when no data is available -->
+<div *ngIf="destinations.length === 0" class="no-destinations-message">
+  <p>No destinations available to display.</p>
+</div>
